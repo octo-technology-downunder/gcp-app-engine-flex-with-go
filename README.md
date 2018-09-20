@@ -98,3 +98,13 @@ When you application is deployed, you should be able to see:
 - You can also take a look to the config file GCP linked to this version and look at the logs of your application.
 
 This screen is important, this is where you can control traffic of your app: Stop a version, Start, Migrate or split traffic between several versions. 
+
+##### Find Instances (Menu > App Engine > Instances >> select your service)
+
+If you version is in serving state (started), 1 or more instances will be linked to it.
+This screen allow you do see those instances, ssh on them
+
+View your deployed app
+$ gcloud app browse -s go-demo-era
+Check logs
+$ gcloud app logs tail -s go-demo-era
