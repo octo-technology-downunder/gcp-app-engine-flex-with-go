@@ -25,13 +25,13 @@ You can run your applications in App Engine using the flexible environment or st
 <img src="./static/gae_flex_standard.jpg" width="400" />
 
 Let's start with a bit of terminology, your applications will use:
-- service, basically one independant piece of software you want to deploy. Except if you are deploying micro-services, most of the time you app will have only 1 service.
-- version, a deployable version of you app, your service can have several versions
-- instance, when a version of a service is deployed, 1 or several instances are created. This is the running instance where you app is hosted.
+- service, basically one independent piece of software you want to deploy. Except if you are deploying micro-services, most of the time your app will have only 1 service.
+- version, a deployable version of your app, your service can have several versions
+- instance, when a version of a service is deployed, 1 or several instances are created. This is the running instance where your app is hosted.
 
 <img src="./static/gae_hierarchy.svg" align="center" width="400" />
 
-In this Lab,we will focus on App Engine Flexible environnement.
+In this Lab, we will focus on App Engine Flexible environment.
 
 
 ## The Lab - step by step
@@ -49,7 +49,7 @@ For more information about this prerequisite step please refer to the [official 
 #### Install and configure Google Cloud SDK 
 
 - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/downloads-interactive) on your machine
-- Configure you SDK with you gcloud account, select a project with the command line `$ gcloud init`
+- Configure you SDK with you gcloud account, select a project with the command line `gcloud init`
 
 
 ### 1. Prepare your application
@@ -64,13 +64,13 @@ For more information about this prerequisite step please refer to the [official 
 
 GCP is using a yaml configuration file to know how to deploy your application, let's create it.
 
-Create an **app.yaml** file to describe you application, for that you can use the existing **app.yaml.template** as example.
+Create an **app.yaml** file to describe your application, for that you can use the existing **app.yaml.template** as an example.
 
 Only 2 lines required are:
 - `env: flex`, type of Google App Engine (GAE) project, GCP provided 2 type of environment: [Flexible or Standard](https://cloud.google.com/appengine/docs/the-appengine-environments).
 - `runtime: go`, to tell GAE which runtime do you want to use.
 
-I would also recommend to set the `service: YOUR_APP_NAME`, if not you application will be deployed in the default one (hope you are alone on your project if it is the case).
+I would also recommend setting the `service: YOUR_APP_NAME`, if not your application will be deployed in the default one (hope you are alone on your project if it is the case).
 
 Please refer to the [official documentation](https://cloud.google.com/appengine/docs/flexible/python/configuring-your-app-with-app-yaml) to see all available options you could put in this file.
 
@@ -110,10 +110,10 @@ Then click on "Versions"
 
 ##### Notice the Version: status, traffic allocation, #instances  (Menu > App Engine > Version >> select your service)
 
-This screen list all versions available for your service. Basically 1 version is created each time you deploy.
-If you can't find your version, use the dropdown at the top to select the good service.
+This screen list all versions available for your service. Basically, 1 version is created each time you deploy.
+If you can't find your version, use the drop-down at the top to select the good service.
 
-When you application is deployed, you should be able to see:
+When your application is deployed, you should be able to see:
 - Status -> Serving
 - Traffic Allocation to 100%
 - Instances 1 (or more according to your configuration)
@@ -121,12 +121,12 @@ When you application is deployed, you should be able to see:
 
 You can also check the logs from your terminal: `gcloud app logs tail -s YOUR_APP_NAME`
 
-This screen is important, this is where you can control traffic of your app: Stop a version, Start, Migrate or split traffic between several versions. 
+This screen is important, this is where you can control the traffic of your app: Stop a version, Start, Migrate or split traffic between several versions. 
 
 ##### Find Instances (Menu > App Engine > Instances >> select your service)
 
-If you version is in serving state (started), 1 or more instances will be linked to it.
-This screen allow you do see those instances, ssh on them
+If your version is in serving state (started), 1 or more instances will be linked to it.
+This screen allows you do see those instances, ssh on them
 
 ##### And then, view your deployed app
 
@@ -145,7 +145,7 @@ Run the same command that previously: `gcloud app deploy`
 
 ##### Notice this 2nd version on the online console (Menu > App Engine > Version >> select your service)
 
-Redeploying an application will create a new "Version" of it, the process is still take a bit of time but at the end of it you will be able to see you new version listed on the "Version" screen.
+Redeploying an application will create a new "Version" of it, the process still takes a bit of time but at the end of it you will be able to see your new version listed on the "Version" screen.
 
 ##### Test your second version
 
@@ -163,9 +163,11 @@ To do so, go the Versions (Menu > App Engine > Version >> select your service), 
 To test if it works:
 - go back to the version list and notice the traffic allocation has been updated.
 - then take another coffee or wait for 5 to 10 minutes. If you do prefer tea, sorry for you it won't work :)
-- open your service in the browser and refresh many time
-- After several refresh, you should see 2 different messages (1 by version)
+- open your service in the browser and refresh many times
+- After several refreshes, you should see 2 different messages (1 by version)
 If 1 of those fails (503) => wait more...
+
+That was easy! You made it, congrats!
 
 <img src="./static/congrats.gif" width="500" />
 
