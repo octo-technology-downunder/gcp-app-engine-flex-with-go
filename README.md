@@ -74,6 +74,7 @@ I would also recommend setting the `service: YOUR_APP_NAME`, if not your applica
 
 Please refer to the [official documentation](https://cloud.google.com/appengine/docs/flexible/python/configuring-your-app-with-app-yaml) to see all available options you could put in this file.
 
+<img src="./static/star1.png" />
 
 ### 2. Deploy your application
 
