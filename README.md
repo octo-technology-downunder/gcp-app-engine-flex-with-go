@@ -1,6 +1,6 @@
 # Google Cloud - App Engine (Flex / Go) - Lab
 
-## Overview
+## Overview of this lab
 
 In this quick lab, we will play with gcloud App Engine.
 
@@ -12,7 +12,19 @@ At the end of the lab you will be able to:
 This lab should take approximately 30 minutes.
 You will need to use you own google cloud account.
 
-![gae_hierarchy](gae_hierarchy | width=300)
+## What is Google App Engine
+
+Google App Engine (GAE) is a web framework and cloud computing platform for **developing and hosting** web applications in Google Cloud Platform. 
+Applications are **sandboxed** and run across **multiple servers**. 
+App Engine offers **automatic scaling** for web applications.
+
+You can run your applications in App Engine using the flexible environment or standard environment:
+- Using the **flexible environment** means that your application instances run within Docker containers on Google Compute Engine virtual machines.
+- Using the **standard environment** means that your application instances run in a sandbox, using the runtime environment of a supported language listed below.
+
+![gae_hierarchy](static/gae_flex_standard.jpg | width=300)
+
+![gae_hierarchy](static/gae_hierarchy.svg | width=300)
 
 ## The Lab - step by step
 
