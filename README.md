@@ -164,6 +164,8 @@ To do so, go the Versions (Menu > App Engine > Version >> select your service), 
 - then select those 2 versions the click “Split Traffic button”
 - select "Random" (easier to test that IP based), then set traffic allocation to 50% 50%
 
+<img src="./static/split.png" width="400" />
+
 To test if it works:
 - go back to the version list and notice the traffic allocation has been updated.
 - then take another coffee or wait for 5 to 10 minutes. If you do prefer tea, sorry for you it won't work :)
