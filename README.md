@@ -93,9 +93,11 @@ If you can't find your version, use the dropdown at the top to select the good s
 
 When you application is deployed, you should be able to see:
 - Status -> Serving
-- Taffic Allocation to 100%
+- Traffic Allocation to 100%
 - Instances 1 (or more according to your configuration)
 - You can also take a look to the config file GCP linked to this version and look at the logs of your application.
+
+You can also check the logs from your terminal: `gcloud app logs tail -s YOUR_APP_NAME`
 
 This screen is important, this is where you can control traffic of your app: Stop a version, Start, Migrate or split traffic between several versions. 
 
@@ -104,7 +106,10 @@ This screen is important, this is where you can control traffic of your app: Sto
 If you version is in serving state (started), 1 or more instances will be linked to it.
 This screen allow you do see those instances, ssh on them
 
-View your deployed app
-$ gcloud app browse -s go-demo-era
-Check logs
-$ gcloud app logs tail -s go-demo-era
+##### And then, view your deployed app
+
+Click on the service name from the Service list or use the command `gcloud app browse -s YOUR_APP_NAME`
+
+![picture](static/congrats.gif)
+
+zdzadadza
