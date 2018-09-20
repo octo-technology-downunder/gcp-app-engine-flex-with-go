@@ -25,7 +25,7 @@ You can run your applications in App Engine using the flexible environment or st
 <img src="./static/gae_flex_standard.jpg" width="400" />
 
 Let's start with a bit of terminology, your applications will use:
-- service, basically one independant piece of software you want to deploy
+- service, basically one independant piece of software you want to deploy. Except if you are deploying micro-services, most of the time you app will have only 1 service.
 - version, a deployable version of you app, your service can have several versions
 - instance, when a version of a service is deployed, 1 or several instances are created. This is the running instance where you app is hosted.
 
