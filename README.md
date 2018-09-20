@@ -12,6 +12,8 @@ At the end of the lab you will be able to:
 This lab should take approximately 30 minutes.
 You will need to use you own google cloud account.
 
+![gae_hierarchy](gae_hierarchy | width=300)
+
 ## The Lab - step by step
 
 ### 0. Prerequisites
@@ -110,6 +112,43 @@ This screen allow you do see those instances, ssh on them
 
 Click on the service name from the Service list or use the command `gcloud app browse -s YOUR_APP_NAME`
 
-![picture](static/congrats.gif)
+![picture](static/congrats.gif | width=200)
 
-zdzadadza
+
+### 3. Create a 2nd version of your application
+
+#### Update the message served by your application
+
+Update the message served your helloworld.go file with something else (ie, from "Hello World" (set in pre-requisites) to "GAE is as simple as that")
+
+#### Redeploy your app
+
+Run the same command that previously: `gcloud app deploy`
+
+##### Notice this 2nd version on the online console (Menu > App Engine > Version >> select your service)
+
+Redeploying an application will create a new "Version" of it, the process is still take a bit of time but at the end of it you will be able to see you new version listed on the "Version" screen.
+
+##### Test your second version
+
+Exactly as before, if it is not ready within 2 minutes, wait a bit more :)
+`gcloud app browse -s go-YOUR_APP_NAME`
+
+
+### 4. Split traffic between those 2 versions
+
+To do so, go the Versions (Menu > App Engine > Version >> select your service), then:
+- start the previous version to have 2 versions with status “Serving”
+- then select those 2 versions the click “Split Traffic button”
+- select "Random" (easier to test that IP based), then set traffic allocation to 50% 50%
+
+To test if it works:
+- go back to the version list and notice the traffic allocation has been updated.
+- then take another coffee or wait for 5 to 10 minutes. If you do prefer tea, sorry for you it won't work :)
+- open your service in the browser and refresh many time
+- After several refresh, you should see 2 different messages (1 by version)
+If 1 of those Fails (503) => wait more...
+
+
+
+
