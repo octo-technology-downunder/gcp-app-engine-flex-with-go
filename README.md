@@ -22,11 +22,16 @@ You can run your applications in App Engine using the flexible environment or st
 - Using the **flexible environment** means that your application instances run within Docker containers on Google Compute Engine virtual machines.
 - Using the **standard environment** means that your application instances run in a sandbox, using the runtime environment of a supported language listed below.
 
-<img src="./static/gae_flex_standard.jpg" width="300" />
+<img src="./static/gae_flex_standard.jpg" width="400" />
 
-![gae_hierarchy](static/gae_flex_standard.jpg | width=300)
+Let's start with a bit of terminology, your applications will use:
+- service, basically one independant piece of software you want to deploy
+- version, a deployable version of you app, your service can have several versions
+- instance, when a version of a service is deployed, 1 or several instances are created. This is the running instance where you app is hosted.
 
-![gae_hierarchy](static/gae_hierarchy.svg | width=300)
+<img src="./static/gae_hierarchy.svg" width="400" />
+
+In this Lab,we will focus on App Engine Flexible environnement.
 
 ## The Lab - step by step
 
@@ -126,8 +131,6 @@ This screen allow you do see those instances, ssh on them
 
 Click on the service name from the Service list or use the command `gcloud app browse -s YOUR_APP_NAME`
 
-![picture](static/congrats.gif | width=200)
-
 
 ### 3. Create a 2nd version of your application
 
@@ -161,8 +164,8 @@ To test if it works:
 - then take another coffee or wait for 5 to 10 minutes. If you do prefer tea, sorry for you it won't work :)
 - open your service in the browser and refresh many time
 - After several refresh, you should see 2 different messages (1 by version)
-If 1 of those Fails (503) => wait more...
+If 1 of those fails (503) => wait more...
 
-
+<img src="./static/congrats.gif" width="300" />
 
 
