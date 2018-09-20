@@ -29,11 +29,11 @@ Let's start with a bit of terminology, your applications will use:
 - version, a deployable version of you app, your service can have several versions
 - instance, when a version of a service is deployed, 1 or several instances are created. This is the running instance where you app is hosted.
 
+<div style="text-align:center">
 <img src="./static/gae_hierarchy.svg" width="400" />
+</div>
 
 In this Lab,we will focus on App Engine Flexible environnement.
-
-<img src="./static/gcp.png" width="400" />
 
 
 ## The Lab - step by step
