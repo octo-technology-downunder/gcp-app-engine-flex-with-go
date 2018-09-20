@@ -33,6 +33,9 @@ Let's start with a bit of terminology, your applications will use:
 
 In this Lab,we will focus on App Engine Flexible environnement.
 
+<img src="./static/separator.png" />
+
+
 ## The Lab - step by step
 
 ### 0. Prerequisites
@@ -166,6 +169,6 @@ To test if it works:
 - After several refresh, you should see 2 different messages (1 by version)
 If 1 of those fails (503) => wait more...
 
-<img src="./static/congrats.gif" width="300" />
+<img src="./static/congrats.gif" width="500" />
 
 
