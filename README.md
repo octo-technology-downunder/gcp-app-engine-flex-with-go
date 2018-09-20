@@ -51,6 +51,7 @@ For more information about this prerequisite step please refer to the [official 
 - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/downloads-interactive) on your machine
 - Configure you SDK with you gcloud account, select a project with the command line `gcloud init`
 
+<img src="./static/star1.png" />
 
 ### 1. Prepare your application
 
@@ -74,7 +75,7 @@ I would also recommend setting the `service: YOUR_APP_NAME`, if not your applica
 
 Please refer to the [official documentation](https://cloud.google.com/appengine/docs/flexible/python/configuring-your-app-with-app-yaml) to see all available options you could put in this file.
 
-<img src="./static/star1.png" />
+<img src="./static/star2.png" />
 
 ### 2. Deploy your application
 
@@ -133,6 +134,7 @@ This screen allows you do see those instances, ssh on them
 
 Click on the service name from the Service list or use the command `gcloud app browse -s YOUR_APP_NAME`
 
+<img src="./static/star3.png" />
 
 ### 3. Create a 2nd version of your application
 
@@ -153,6 +155,7 @@ Redeploying an application will create a new "Version" of it, the process still 
 Exactly as before, if it is not ready within 2 minutes, wait a bit more :)
 `gcloud app browse -s go-YOUR_APP_NAME`
 
+<img src="./static/star4.png" />
 
 ### 4. Split traffic between those 2 versions
 
