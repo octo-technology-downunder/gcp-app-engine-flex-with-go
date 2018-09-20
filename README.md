@@ -22,6 +22,8 @@ You can run your applications in App Engine using the flexible environment or st
 - Using the **flexible environment** means that your application instances run within Docker containers on Google Compute Engine virtual machines.
 - Using the **standard environment** means that your application instances run in a sandbox, using the runtime environment of a supported language listed below.
 
+<img src="./static/gae_flex_standard.jpg" width="300" />
+
 ![gae_hierarchy](static/gae_flex_standard.jpg | width=300)
 
 ![gae_hierarchy](static/gae_hierarchy.svg | width=300)
