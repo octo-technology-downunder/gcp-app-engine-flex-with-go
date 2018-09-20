@@ -33,7 +33,7 @@ Let's start with a bit of terminology, your applications will use:
 
 In this Lab,we will focus on App Engine Flexible environnement.
 
-<img src="./static/separator.png" height="150" />
+<img src="./static/separator.png" width="600" />
 
 
 ## The Lab - step by step
