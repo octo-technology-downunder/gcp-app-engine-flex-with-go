@@ -1,6 +1,6 @@
 # Google Cloud - App Engine (Flex / Go) - Lab
 
-This lab is part of the foundations trainings in place at [OCTO Technology Australia](http://careers.octo.com.au/).
+This lab is part of the [foundations trainings](https://github.com/ealliaume/foundations) in place at [OCTO Technology Australia](http://careers.octo.com.au/).
 
 ## Overview of this lab
 
