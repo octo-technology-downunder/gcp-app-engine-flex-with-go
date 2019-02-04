@@ -85,7 +85,17 @@ Please refer to the [official documentation](https://cloud.google.com/appengine/
 
 To do so, just use this simple command line in you shell: `gcloud app deploy`.
 
-It will ask you a few questions like in which region you do want to deploy the app. 
+It will ask you a few questions like in which region you do want to deploy the app.
+
+Note that you must set service's argument of yaml file to default !
+
+service: default
+
+Or you'll get the following error:
+
+ERROR: (gcloud.app.deploy) INVALID_ARGUMENT: The first service (module) you upload to a new application must be the 'default' service (module). 
+Please upload a version of the 'default' service (module) before uploading a version for the 'go-demo-roch' service (module).
+
 Then take a coffee, it could take up to 10 minutes for the app to be created.
 
 #### Check the results in the google cloud online console
@@ -162,7 +172,7 @@ Exactly as before, if it is not ready within 2 minutes, wait a bit more :)
 ### 4. Split traffic between those 2 versions
 
 To do so, go the Versions (Menu > App Engine > Version >> select your service), then:
-- start the previous version to have 2 versions with status “Serving”
+- start the previous version to have 2 versions with status “Serving” (You can do it on the cloud console or with the CLI)
 - then select those 2 versions the click “Split Traffic button”
 - select "Random" (easier to test that IP based), then set traffic allocation to 50% 50%
 
@@ -176,6 +186,8 @@ To test if it works:
 If 1 of those fails (503) => wait more...
 
 That was easy! You made it, congrats!
+
+Don't forget to delete all the ressources you created. Or you can also delete the whole project.
 
 <img src="./static/congrats.gif" width="500" />
 
